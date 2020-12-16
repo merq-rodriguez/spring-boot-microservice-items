@@ -3,7 +3,6 @@ package com.example.items.controllers;
 import java.util.List;
 
 import com.example.items.models.Item;
-import com.example.items.services.ItemService;
 import com.example.items.services.interfaces.IItemService;
 
 import org.springframework.beans.factory.annotation.Autowired;
