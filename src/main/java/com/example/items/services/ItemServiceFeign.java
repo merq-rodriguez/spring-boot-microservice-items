@@ -10,22 +10,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service("serviceFeign")
 @Primary()
+@Service("serviceFeign")
 public class ItemServiceFeign implements IItemService {
 
   @Autowired
-  private IProductRequest clientRest;
+  private IProductRequest clientFeign;
 
   @Override
   public List<Item> getItems() {
-    return clientRest.getProducts().stream()
+    return clientFeign.getProducts().stream()
       .map( pro -> new Item(pro, 1))
       .collect(Collectors.toList());
   }
 
   @Override
   public Item findById(Long id, Integer quantity) {
-    return new Item(clientRest.findProductById(id),quantity);
+    return new Item(clientFeign.findProductById(id),quantity);
   }
 }
