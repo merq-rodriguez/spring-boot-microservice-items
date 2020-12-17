@@ -11,17 +11,15 @@ import com.example.items.models.Product;
 import com.example.items.services.interfaces.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-@Service("serviceRestTemplate")
+@Service("serviceRest")
 public class ItemService implements IItemService{
   
-  final String uri = "http://localhost:4000/products";
+  private final String uri = "http://product-service/products";
 
   @Autowired
-  @Qualifier("ClientRest")
   private RestTemplate clientRest;
 
   @Override
