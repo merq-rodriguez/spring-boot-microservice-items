@@ -1,19 +1,18 @@
-package com.example.items.requests;
+package com.example.items.services;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import com.example.items.models.Item;
-import com.example.items.requests.interfaces.IProductRequest;
-import com.example.items.services.interfaces.IItemService;
+import com.example.items.services.interfaces.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Primary
-@Service("ProductRequest")
-public class ProductRequest implements IItemService {
+@Service("serviceFeign")
+@Primary()
+public class ItemServiceFeign implements IItemService {
 
   @Autowired
   private IProductRequest clientRest;
