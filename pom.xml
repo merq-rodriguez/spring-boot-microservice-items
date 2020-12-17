@@ -20,6 +20,13 @@
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+			<version>2.2.6.RELEASE</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -61,6 +68,16 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		
+		<resources>
+			<resource>
+					<directory>src/main/resources</directory>
+					<filtering>true</filtering>
+					<includes>
+							<include>application.yml</include>
+					</includes>
+			</resource>
+	</resources>
 	</build>
 
 	<repositories>
@@ -71,4 +88,5 @@
 		</repository>
 	</repositories>
 
+	
 </project>

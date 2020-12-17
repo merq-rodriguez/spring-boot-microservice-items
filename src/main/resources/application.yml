@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: product-items
+
+server:
+  port: 4001
+
+ribbon:
+  eureka:
+    enabled: false
+  eager-load:
+    enabled: true
+    clients: product-service
+
+product-service:
+  ribbon:
+    listOfServers: localhost:4000,localhost:5001
+    ServerListRefreshInterval: 15000
