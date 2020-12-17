@@ -6,6 +6,7 @@ import com.example.items.models.Item;
 import com.example.items.services.interfaces.IItemService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ItemController {
   
-  @Autowired
+  @Autowired()
+  @Qualifier("serviceFeign")
   private IItemService itemService;
 
   @GetMapping()

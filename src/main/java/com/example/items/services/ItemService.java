@@ -8,17 +8,17 @@ import java.util.stream.Collectors;
 
 import com.example.items.models.Item;
 import com.example.items.models.Product;
-import com.example.items.services.interfaces.IItemService;
+import com.example.items.services.interfaces.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-@Service
+@Service("serviceRestTemplate")
 public class ItemService implements IItemService{
   
-  final String uri = "http://localhost:4000/products/";
+  final String uri = "http://localhost:4000/products";
 
   @Autowired
   @Qualifier("ClientRest")
