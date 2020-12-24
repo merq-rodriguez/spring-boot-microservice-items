@@ -7,7 +7,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.example.items.models.Item;
-import com.example.items.models.Product;
+import com.springboot.app.common.models.Product;
+
 import com.example.items.services.interfaces.*;
 
 import org.springframework.beans.factory.annotation.Autowired;

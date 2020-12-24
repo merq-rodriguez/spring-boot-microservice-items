@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import com.example.items.models.Item;
 import com.example.items.services.interfaces.*;
+import com.springboot.app.common.models.Product;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;

@@ -1,4 +1,5 @@
 package com.example.items.models;
+import com.springboot.app.common.models.Product;
 
 public class Item {
   private Product product;
